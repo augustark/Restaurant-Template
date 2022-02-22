@@ -24,8 +24,13 @@ header > .logo {
   color: #FFF;
   padding: 0 .5em;
   outline: auto;
-  /* border-radius: .3em; */
-  /* margin: 0; */
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+header > .logo:hover {
+  transform: translate(-2%, -2%);
+  box-shadow: 5px 5px 0 0 rgb(255, 255, 255);
 }
 
 .toggle > img {
@@ -35,6 +40,11 @@ header > .logo {
   top: 0;
   right: 0;
   margin: 1.5rem 2rem;
+  transition: all 100ms;
+}
+
+.toggle > img:hover {
+  transform: scale(1.1);
 }
 
 .toggle > img:first-child {
@@ -68,7 +78,7 @@ header > .logo {
 
 a:hover,
 a:focus {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
 }
 
 .hide {
@@ -85,37 +95,38 @@ a:focus {
   }
 
   header > .menu {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .toggle > img {
-    width: 30px;
+    width: 25px;
   }
 
   .toggle > img:first-child {
-    width: 30px;
+    width: 25px;
     margin: 1.5em;
   }
 }
 
 @media (min-width: 800px) {
   header > .logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
-  .toggle > img:first-child {
-    width: 40px;
-    margin: 2em;
+  header > .menu {
+    font-size: 1.5rem;
   }
+
+  
 }
 
 @media (min-width: 1200px) {
   header {
     justify-content: space-between;
-    padding: 0 4em;
+    padding: 0 2em;
   }
 
-  .menu {
+  header > .menu {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -123,16 +134,24 @@ a:focus {
     margin: 0;
   }
 
-  .menu > a {
+  header > .menu > a {
     font-size: 1.2rem;
-    border-bottom-color: #FFF;
+    /* border-bottom-color: black; */
   }
 
-  .menu > a:hover {
+  header > .menu > a:hover {
     color: #FFF;
   }
 
   .toggle {
     display: none;
   }
+}
+
+.active {
+  display: flex;
+}
+
+a.active {
+  border-bottom: 2px solid #FFF;
 }

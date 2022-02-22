@@ -47,18 +47,19 @@ export function Menu() {
     const div = document.createElement('div')
     div.classList.add('menu-item')
 
+    
     const img = new Image()
     img.src = src
     img.classList.add('dish-img')
-
+    
     const h2 = document.createElement('h2')
     h2.append(dish)
     h2.classList.add('dish-name')
-
+    
     const p = document.createElement('p')
     p.append(desc)
     p.classList.add('dish-desc')
-
+    
     div.append(img, h2, p)
     catalog.append(div)
   }
@@ -66,3 +67,4 @@ export function Menu() {
   section.append(h1, catalog)
   return section
 }
+
